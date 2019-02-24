@@ -1,7 +1,8 @@
 # InstagramFirstCommenter
-This is a bot that will make a comment on a post as soon as it is posted on instagram. Just follow the setup instructions and replace the dummy data by a valid instagram account data for it to work.
+~OK, so basically this is DuarteDx's project and I just changed some css element ids to be updated with the new look of Instagram. 10/10 this project is a great starting point. I plan on making this bot search for a specific keyword in a comment and then comment on that comment with predetermined text.(armstrongsam25)~
 
-I created this to win tickets for [Vodafone Paredes de Coura](https://www.paredesdecoura.com/). Vodafone had an contest where they posted a total of 8 posts on their instagram page at random times of the day during 2 weeks, this first 10 people to comment those posts won 200 euros worth of tickets for their music festival. This bot did its job and won those tickets.
+------FROM ORIGINAL README------
+This is a bot that will make a comment on a post as soon as it is posted on instagram. Just follow the setup instructions and replace the dummy data by a valid instagram account data for it to work.
 
 # Requirements
 1 - A Windows, Mac or Linux Computer
@@ -35,7 +36,7 @@ For this bot to work you need to give it an instagram account for it to login in
 Go to the file spec.js  and change this code with your account login information:
 
 	// My instagram user information
-	const myUsername =  'myEmail@gmail.com';
+	const myUsername =  'myUsername';
 	const myPassword =  'myPassword123';
 
 ### 5 - Choose the page you want to target
@@ -72,7 +73,7 @@ Run the bot:
 # About the bot
 The bot will login once into instagram and go to the target page.
 
-It will then keep refreshing the page every 2.5 seconds while there is no new post.
+It will then keep refreshing the page every 2.5(~I think I fucked this number up, but lets pretend that it's 2.5~) seconds while there is no new post.
 
 Once there is a new post it will open said post and comment what you previously defined.
 
