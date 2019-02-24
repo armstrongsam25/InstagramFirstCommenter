@@ -1,7 +1,8 @@
 # InstagramFirstCommenter
-~OK, so basically this is DuarteDx's project and I just changed some css element ids to be updated with the new look of Instagram. 10/10 this project is a great starting point. I plan on making this bot search for a specific keyword in a comment and then comment on that comment with predetermined text.(armstrongsam25)~
+----OK, so basically this is DuarteDx's project and I just changed some css element ids to be updated with the new look of Instagram. 10/10 this project is a great starting point. I plan on making this bot search for a specific keyword in a comment and then comment on that comment with predetermined text.(armstrongsam25)---
 
 ------FROM ORIGINAL README------
+
 This is a bot that will make a comment on a post as soon as it is posted on instagram. Just follow the setup instructions and replace the dummy data by a valid instagram account data for it to work.
 
 # Requirements
@@ -73,7 +74,7 @@ Run the bot:
 # About the bot
 The bot will login once into instagram and go to the target page.
 
-It will then keep refreshing the page every 2.5(~I think I fucked this number up, but lets pretend that it's 2.5~) seconds while there is no new post.
+It will then keep refreshing the page every ~2.5~(----I think I fucked this number up, but lets pretend that it's 2.5----) seconds while there is no new post.
 
 Once there is a new post it will open said post and comment what you previously defined.
 
