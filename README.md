@@ -1,6 +1,6 @@
 # IFC Redux
 ----
-OK, so basically this is DuarteDx's project and I just changed some css element ids to be updated with the new look of Instagram. 10/10 this project is a great starting point. I plan on making this bot search for a specific keyword in a comment and then comment on that comment with predetermined text.(armstrongsam25)
+OK, so basically this is DuarteDx's project and I just changed some css element ids to be updated with the new look of Instagram. 10/10 this project is a great starting point. I plan on making this bot ~search for a specific keyword in a comment and then comment on that comment with predetermined text~  comment the photo's caption in Mocking Sponge style;).(armstrongsam25)
 ----
 # CHROME MUST BE INSTALLED!!!
 
