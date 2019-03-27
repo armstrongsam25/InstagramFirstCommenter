@@ -1,35 +1,48 @@
-
 // This bot will post a predefined comment as fast as possible to a new post on the target profile
 describe('Instagram fast commenter', function() {
 
-  // Edit the information bellow!
+function spongeMock(text) {
+  var res = [];
+  var next = Math.floor(Math.random() * 3) + 1; // random number from [1,3]
+  for(var i = 0; i < text.length; ++i) {
+    if(i === next) {
+	  res += text.charAt(i).toUpperCase();
+	  next += Math.floor(Math.random() * 3) + 1; 
+	} else {
+	  res += text.charAt(i);
+	}
+  }
+  return res;
+}
+
+  // Edit the information below!
   // Target page
-  const targetURL = 'https://www.instagram.com/myTargetPage';
-  var numberOfPostsOnTargetProfile = 69;
-  const commentText = 'This is the comment I am posting';
+  const targetURL = 'https://www.instagram.com/sadiegg13';
+  var numberOfPostsOnTargetProfile = 145;
+  //const commentText = '<placeholder>';
   // My instagram user information
-  const myUsername = 'myUsername';
-  const myPassword = 'myPassword123';
+  const myUsername = '_nonbinarybot_';
+  const myPassword = 'RobotTake0ver69';
   // Number of times the page should refresh
   // Each iteration takes around 2.5 seconds
   // 30000 iterations take aproximately 21 hours to complete ((2.5*30000)/3600) = 20.88 hours
   var numberOfIterations = 30000;
 
-  // Do not edit the information bellow!
+  // Do not edit the information below (unless you know what you're doing)!
 
   // This code runs once for loging into your account
   browser.driver.get('https://www.instagram.com/accounts/login/');
   browser.driver.sleep(1000);
   browser.driver.findElement(by.css('[name="username"]')).sendKeys(myUsername);
   browser.driver.findElement(by.css('[name="password"]')).sendKeys(myPassword);
-  browser.driver.findElement(by.css('._L3NKy')).click(); //This is the login button
+  browser.driver.findElement(by.css('.L3NKy')).click(); //This is the login button
   browser.driver.sleep(1000);
   browser.driver.get(targetURL);
   browser.driver.sleep(1000);
 
   // Main function that runs in loop
   function instaAutoCommenter(numberOfIterations){
-    it('I dont know why this is here but okay', function() {
+    it('Finding caption text and sending keys', function() {
           //The below element is for the num of followers target acct has
       browser.driver.findElement(by.css('.g47SY')).getText().then( (data) => { 
         console.log(numberOfIterations);
@@ -43,9 +56,19 @@ describe('Instagram fast commenter', function() {
           browser.driver.sleep(1500);
           browser.driver.findElement(by.css('.Ypffh')).click(); //comment button
           browser.driver.sleep(200);
-          browser.driver.findElement(by.css('.Ypffh')).sendKeys(commentText);
-          browser.driver.findElement(by.css('.Ypffh')).sendKeys(protractor.Key.ENTER);
-          browser.driver.sleep(5000); //changes from 2000 to this
+
+          //var captionText;
+          browser.driver.findElement(by.xpath('//html/body/div[2]/div[2]/div/article/div[2]/div[1]/ul/li[1]/div/div/div/span/')).getText().then( (data) => {
+          	console.log(data);
+          });
+          //var innerText = caption;
+          
+          //console.log(plz);
+
+      	  //browser.driver.findElement(by.css('.Ypffh')).sendKeys(spongeMock(fuck)); // get innerText to be a string!!!
+      	  browser.driver.findElement(by.css('.Ypffh')).sendKeys(protractor.Key.ENTER);
+
+          browser.driver.sleep(2000); 
           numberOfPostsOnTargetProfile++;
         }
         browser.driver.sleep(2500);
