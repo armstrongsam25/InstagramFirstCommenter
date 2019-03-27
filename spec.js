@@ -1,3 +1,4 @@
+//BETA
 // This bot will post a predefined comment as fast as possible to a new post on the target profile
 describe('Instagram fast commenter', function() {
 
